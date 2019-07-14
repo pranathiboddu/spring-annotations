@@ -9,16 +9,22 @@ public class Actor {
 
     private String actorName;
     private String gender;
-    private int age;
-
+    int age;
     @Autowired
-    public Actor(String actorName,String gender,int age)
-    {
-        this.actorName=actorName;
-        this.gender=gender;
-        this.age=age;
+    @Value("${actor.actorName}")
+    public void setActorName(String actorName) {
+        this.actorName = actorName;
     }
-
+    @Autowired
+    @Value("${actor.gender}")
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    @Autowired
+    @Value("${actor.age}")
+    public void setAge(int age) {
+        this.age = age;
+    }
     public void displayActorInfo() {
         System.out.println("Actor name :" + actorName + " Gender:" + gender + " Age:" + age);
     }
