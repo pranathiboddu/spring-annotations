@@ -1,18 +1,23 @@
 package com.stackroute.domain;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Actor {
 
-    @Value("${actor.actorName}")
+
     private String actorName;
-
-    @Value("${actor.gender}")
     private String gender;
+    private int age;
 
-    @Value("${actor.age}")
-    int age;
+    @Autowired
+    public Actor(String actorName,String gender,int age)
+    {
+        this.actorName=actorName;
+        this.gender=gender;
+        this.age=age;
+    }
 
     public void displayActorInfo() {
         System.out.println("Actor name :" + actorName + " Gender:" + gender + " Age:" + age);
