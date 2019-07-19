@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //used @component to create a bean for Movie
 public class Movie {
     @Autowired
     private Actor actor;
@@ -13,7 +13,8 @@ public class Movie {
         this.actor = actor;
     }
 
-    public void display() {
+    public void display()  //calling actor class method
+    {
         actor.displayActorInfo();
     }
 }
