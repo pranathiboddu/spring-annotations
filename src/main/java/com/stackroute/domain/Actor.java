@@ -3,13 +3,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //declared @component to creae a bean 
 public class Actor {
 
 
     private String actorName;
     private String gender;
     int age;
+    //passed values to the literals using @value
     @Autowired
     @Value("${actor.actorName}")
     public void setActorName(String actorName) {
