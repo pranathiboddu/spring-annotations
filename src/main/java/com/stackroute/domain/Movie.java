@@ -10,8 +10,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-@Component
-public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
+@Component //declared component for Movie class to create a Movie bean
+public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware//implemented interfaces
+{
     @Autowired
     private Actor actor;
     public void setActor(Actor actor)
@@ -24,7 +25,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
         actor.displayActorInfo();
     }
 
-
+//implemented methods for interfaces
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println(beanFactory.getBean("movie"));
     }
