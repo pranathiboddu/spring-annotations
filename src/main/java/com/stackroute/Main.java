@@ -8,6 +8,7 @@ import java.net.SocketTimeoutException;
 
 public class Main {
     public static void main(String[] args) {
+        //using application context
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MovieConfiguration.class);
         Movie movie1 = annotationConfigApplicationContext.getBean("movie1", Movie.class);
         movie1.display();
