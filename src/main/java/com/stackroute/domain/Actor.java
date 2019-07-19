@@ -2,9 +2,9 @@ package com.stackroute.domain;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //declared component
 public class Actor {
-
+//passed values to the literals using @value
     @Value("${actor.actorName}")
     private String actorName;
 
