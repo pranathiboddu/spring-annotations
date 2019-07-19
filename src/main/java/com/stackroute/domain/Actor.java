@@ -3,7 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //decalred component to create a bean
 public class Actor {
 
 
@@ -11,7 +11,7 @@ public class Actor {
     private String gender;
     private int age;
 
-    @Autowired
+    @Autowired //used annotation autowire
     public Actor(String actorName,String gender,int age)
     {
         this.actorName=actorName;
