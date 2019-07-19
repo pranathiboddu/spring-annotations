@@ -5,7 +5,8 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 
-public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
+public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean//implemented initializingbean and disposablebean
+{
 
 
     public void afterPropertiesSet() throws Exception {
@@ -19,11 +20,13 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
         System.out.println("destroyed");
 
     }
-    public void customInit(){
+    public void customInit() //initialized custom init
+    {
         System.out.println("Inside BeanLifeCycleDemoBean: customInit()");
     }
 
-    public void customDestroy(){
+    public void customDestroy() // initialized custom destroy
+    {
         System.out.println("Inside BeanLifeCycleDemoBean:  customDestroy()");
     }
 
